@@ -1,0 +1,23 @@
+﻿{
+  "$schema": "https://json.schemastore.org/launchsettings.json",
+  "profiles": {
+    "https": {
+      "commandName": "Project",
+      "dotnetRunMessages": true,
+      "launchBrowser": true,
+      "launchUrl": "swagger",
+      "applicationUrl": "https://localhost:5001;http://localhost:5000",
+      "environmentVariables": {
+        "APP_ENVIRONMENT": "ide",
+        "APP_LANGUAGE": "en-US",
+        "APP_NAME": "TemplatePostgreSQL",
+        "APP_VERSION": "1.0.0",
+        "JWT_AUDIENCE": "DEFAULT_JWT_AUDIENCE",
+        "JWT_ISSUER": "DEFAULT_JWT_ISSUER",
+        "JWT_SECURITY_KEY": "DEFAULT_256_BITS_JWT_SECURITY_KEY",
+        "POSTGRESQL_CONNECTION_STRING": "Host=127.0.0.1;Port=5432;Database=TemplatePostgreSQL;Username=postgres;Password=postgres;Command Timeout=60;Timeout=60;SSL Mode=Disable;Trust Server Certificate=True",
+        "RABBITMQ_CONNECTION_STRING": "amqp://guest:guest@127.0.0.1:5672/"
+      }
+    }
+  }
+}

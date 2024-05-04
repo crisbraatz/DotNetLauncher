@@ -1,0 +1,56 @@
+services:
+  templatemongodb:
+    build:
+      context: .
+    ports:
+      - '5001:8080'
+    environment:
+      APP_ENVIRONMENT: docker
+      APP_LANGUAGE: en-US
+      APP_NAME: TemplateMongoDB
+      APP_VERSION: 1.0.0
+      JWT_AUDIENCE: DEFAULT_JWT_AUDIENCE
+      JWT_ISSUER: DEFAULT_JWT_ISSUER
+      JWT_SECURITY_KEY: DEFAULT_256_BITS_JWT_SECURITY_KEY
+      MONGODB_CONNECTION_STRING: mongodb://mongo:mongo@mongo:27017
+      MONGODB_DATABASE: TemplateMongoDB
+      RABBITMQ_CONNECTION_STRING: amqp://guest:guest@rabbitmq:5672/
+    depends_on:
+      mongo:
+        condition: service_healthy
+      rabbitmq:
+        condition: service_healthy
+
+  mongo:
+    image: mongo:latest
+    volumes:
+      - mongo:/data/mongo
+    ports:
+      - '27017:27017'
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: mongo
+      MONGO_INITDB_ROOT_PASSWORD: mongo
+    hostname: mongo
+    healthcheck:
+      test: echo 'db.runCommand("ping").ok' | mongosh mongo:27017/TemplateMongoDB --quiet
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+  rabbitmq:
+    image: rabbitmq:3-management
+    volumes:
+      - rabbitmq:/data/rabbitmq
+    ports:
+      - '5672:5672'
+      - '15672:15672'
+    hostname: rabbitmq
+    healthcheck:
+      test: rabbitmq-diagnostics -q ping
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+volumes:
+  mongo:
+  rabbitmq:

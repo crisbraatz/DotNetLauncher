@@ -1,0 +1,244 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Presentation</name>
+    </assembly>
+    <members>
+        <member name="T:Presentation.Contracts.BaseDataForListResponse">
+            <summary>
+            Base data for list response.
+            </summary>
+        </member>
+        <member name="T:Presentation.Contracts.BaseList">
+            <summary>
+            Base list.
+            </summary>
+        </member>
+        <member name="P:Presentation.Contracts.BaseList.Id">
+            <summary>
+            ID.
+            </summary>
+        </member>
+        <member name="P:Presentation.Contracts.BaseList.CreatedAt">
+            <summary>
+            Date of creation. 
+            </summary>
+        </member>
+        <member name="P:Presentation.Contracts.BaseList.CreatedBy">
+            <summary>
+            Author of creation.
+            </summary>
+        </member>
+        <member name="P:Presentation.Contracts.BaseList.UpdatedAt">
+            <summary>
+            Date of update.
+            </summary>
+        </member>
+        <member name="P:Presentation.Contracts.BaseList.UpdatedBy">
+            <summary>
+            Author of update.
+            </summary>
+        </member>
+        <member name="P:Presentation.Contracts.BaseList.Active">
+            <summary>
+            Is active?
+            </summary>
+        </member>
+        <member name="T:Presentation.Contracts.BaseListRequest">
+            <summary>
+            Base list request.
+            </summary>
+        </member>
+        <member name="P:Presentation.Contracts.BaseListRequest.OrderBy">
+            <summary>
+            Page order by.
+            Default: id asc.
+            </summary>
+        </member>
+        <member name="P:Presentation.Contracts.BaseListRequest.Page">
+            <summary>
+            Page number.
+            Default: 1.
+            </summary>
+        </member>
+        <member name="P:Presentation.Contracts.BaseListRequest.Size">
+            <summary>
+            Total page items.
+            Default: 10.
+            </summary>
+        </member>
+        <member name="T:Presentation.Contracts.BaseListResponse`1">
+            <summary>
+            Base list response.
+            </summary>
+            <typeparam name="T">Entity type.</typeparam>
+        </member>
+        <member name="P:Presentation.Contracts.BaseListResponse`1.Data">
+            <summary>
+            Data.
+            </summary>
+        </member>
+        <member name="P:Presentation.Contracts.BaseListResponse`1.CurrentPage">
+            <summary>
+            Current page.
+            </summary>
+        </member>
+        <member name="P:Presentation.Contracts.BaseListResponse`1.TotalPages">
+            <summary>
+            Total pages.
+            </summary>
+        </member>
+        <member name="P:Presentation.Contracts.BaseListResponse`1.TotalItems">
+            <summary>
+            Total items.
+            </summary>
+        </member>
+        <member name="T:Presentation.Contracts.Users.AuthenticateUserRequest">
+            <summary>
+            Authenticate user request.
+            </summary>
+        </member>
+        <member name="P:Presentation.Contracts.Users.AuthenticateUserRequest.Email">
+            <summary>
+            Valid format email.
+            </summary>
+        </member>
+        <member name="P:Presentation.Contracts.Users.AuthenticateUserRequest.Password">
+            <summary>
+            Valid format password.
+            At least one lower case letter, one upper case letter and one number.
+            Must have between 8 and 16 characters.
+            </summary>
+        </member>
+        <member name="T:Presentation.Contracts.Users.CreateUserRequest">
+            <summary>
+            Create user request.
+            </summary>
+        </member>
+        <member name="P:Presentation.Contracts.Users.CreateUserRequest.Email">
+            <summary>
+            Valid format email.
+            </summary>
+        </member>
+        <member name="P:Presentation.Contracts.Users.CreateUserRequest.Password">
+            <summary>
+            Valid format password.
+            At least one lower case letter, one upper case letter and one number.
+            Must have between 8 and 16 characters.
+            </summary>
+        </member>
+        <member name="T:Presentation.Contracts.Users.DeactivateUserRequest">
+            <summary>
+            Deactivate user request.
+            </summary>
+        </member>
+        <member name="P:Presentation.Contracts.Users.DeactivateUserRequest.Email">
+            <summary>
+            Valid format email.
+            </summary>
+        </member>
+        <member name="P:Presentation.Contracts.Users.DeactivateUserRequest.Password">
+            <summary>
+            Valid format password.
+            At least one lower case letter, one upper case letter and one number.
+            Must have between 8 and 16 characters.
+            </summary>
+        </member>
+        <member name="T:Presentation.Contracts.Users.ListUserResponse">
+            <summary>
+            List user response.
+            </summary>
+        </member>
+        <member name="P:Presentation.Contracts.Users.ListUserResponse.Email">
+            <summary>
+            Email.
+            </summary>
+        </member>
+        <member name="T:Presentation.Contracts.Users.ListUsersRequest">
+            <summary>
+            List users request.
+            </summary>
+        </member>
+        <member name="P:Presentation.Contracts.Users.ListUsersRequest.Email">
+            <summary>
+            Filter by email.
+            </summary>
+        </member>
+        <member name="T:Presentation.Contracts.Users.ListUsersResponse">
+            <summary>
+            List users response.
+            </summary>
+        </member>
+        <member name="T:Presentation.Contracts.Users.UpdateUserRequest">
+            <summary>
+            Update user request.
+            </summary>
+        </member>
+        <member name="P:Presentation.Contracts.Users.UpdateUserRequest.Email">
+            <summary>
+            Valid format email.
+            </summary>
+        </member>
+        <member name="P:Presentation.Contracts.Users.UpdateUserRequest.OldPassword">
+            <summary>
+            Valid format password.
+            At least one lower case letter, one upper case letter and one number.
+            Must have between 8 and 16 characters.
+            </summary>
+        </member>
+        <member name="P:Presentation.Contracts.Users.UpdateUserRequest.NewPassword">
+            <summary>
+            Valid format password.
+            At least one lower case letter, one upper case letter and one number.
+            Must have between 8 and 16 characters.
+            Must be different from old password.
+            </summary>
+        </member>
+        <member name="T:Presentation.Controllers.BaseController">
+            <response code="401">Unauthorized access.</response>
+            <response code="500">An internal server error has occurred.</response>
+        </member>
+        <member name="M:Presentation.Controllers.BaseController.#ctor(Domain.Entities.IBaseEntityRepository{Domain.Entities.Users.User})">
+            <response code="401">Unauthorized access.</response>
+            <response code="500">An internal server error has occurred.</response>
+        </member>
+        <member name="M:Presentation.Controllers.UsersController.AuthenticateAsync(Presentation.Contracts.Users.AuthenticateUserRequest,System.Threading.CancellationToken)">
+            <summary>
+            Authenticates the user using the email and password provided.
+            </summary>
+            <response code="200">The authorization token.</response>
+            <response code="400">The request was unsuccessful, see details.</response>
+            <response code="404">User not found.</response>
+        </member>
+        <member name="M:Presentation.Controllers.UsersController.CreateAsync(Presentation.Contracts.Users.CreateUserRequest,System.Threading.CancellationToken)">
+            <summary>
+            Creates the user using the email and password provided.
+            </summary>
+            <response code="200">User created.</response>
+            <response code="400">The request was unsuccessful, see details.</response>
+            <response code="409">User already created.</response>
+        </member>
+        <member name="M:Presentation.Controllers.UsersController.DeactivateAsync(Presentation.Contracts.Users.DeactivateUserRequest,System.Threading.CancellationToken)">
+            <summary>
+            Deactivates the user using the email and password provided.
+            </summary>
+            <response code="200">User deactivated.</response>
+            <response code="400">The request was unsuccessful, see details.</response>
+            <response code="404">User not found.</response>
+        </member>
+        <member name="M:Presentation.Controllers.UsersController.ListByAsync(Presentation.Contracts.Users.ListUsersRequest,System.Threading.CancellationToken)">
+            <summary>
+            Lists the users using the filters provided.
+            </summary>
+            <response code="200">Users listed.</response>
+        </member>
+        <member name="M:Presentation.Controllers.UsersController.UpdatePasswordAsync(Presentation.Contracts.Users.UpdateUserRequest,System.Threading.CancellationToken)">
+            <summary>
+            Updates the user's password using the email, old and new passwords provided.
+            </summary>
+            <response code="200">User password updated.</response>
+            <response code="400">The request was unsuccessful, see details.</response>
+            <response code="404">User not found.</response>
+        </member>
+    </members>
+</doc>

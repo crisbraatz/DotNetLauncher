@@ -1,0 +1,38 @@
+{
+  "stryker-config": {
+    "ignore-methods": [
+      "DeleteMany*",
+      "DeleteOne*",
+      "*Exception.ctor",
+      "ExistsBy*",
+      "InsertMany*",
+      "InsertOne*",
+      "ListBy*",
+      "Log*",
+      "ProjectManyBy*",
+      "ProjectOneBy*",
+      "SelectManyBy*",
+      "SelectOneBy*",
+      "UpdateMany*",
+      "UpdateOne*"
+    ],
+    "mutate": [
+      "!**/Application/ConfigureHostBuilderExtension.cs",
+      "!**/Application/Exceptions/**",
+      "!**/Application/Observability/**",
+      "!**/Application/ServiceCollectionExtension.cs",
+      "!**/Domain/AppSettings.cs",
+      "!**/Infrastructure/Migrations/**",
+      "!**/Infrastructure/PostgreSql/**",
+      "!**/Infrastructure/RabbitMq/**",
+      "!**/Infrastructure/ServiceCollectionExtension.cs",
+      "!**/Presentation/Contracts/**",
+      "!**/Presentation/Controllers/**",
+      "!**/Presentation/Middlewares/**",
+      "!**/Presentation/Program.cs",
+      "!**/Presentation/ServiceCollectionExtension.cs",
+      "!**/Presentation/Swagger/**"
+    ],
+    "mutation-level": "Complete"
+  }
+}

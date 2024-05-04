@@ -1,0 +1,25 @@
+name: CD
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup .NET SDK
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: 8.0.x
+
+      - name: .NET Publish
+        run: dotnet publish -c Release -p:PublishDir=./publish
+
+      - name: Deploy to GitHub Pages
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          folder: DotNetLauncher/publish/wwwroot
+          token: ${{ secrets.TOKEN }}

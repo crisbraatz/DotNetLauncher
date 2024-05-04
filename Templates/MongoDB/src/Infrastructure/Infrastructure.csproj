@@ -1,0 +1,25 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net8.0</TargetFramework>
+        <Nullable>disable</Nullable>
+        <ImplicitUsings>enable</ImplicitUsings>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="..\Domain\Domain.csproj"/>
+    </ItemGroup>
+
+    <ItemGroup>
+        <PackageReference Include="AspNetCore.HealthChecks.MongoDb" Version="8.0.1"/>
+        <PackageReference Include="AspNetCore.HealthChecks.Rabbitmq" Version="8.0.1"/>
+        <PackageReference Include="MongoDB.Driver" Version="2.25.0"/>
+        <PackageReference Include="RabbitMQ.Client" Version="6.8.1"/>
+    </ItemGroup>
+
+    <ItemGroup>
+        <InternalsVisibleTo Include="Integration"/>
+        <InternalsVisibleTo Include="Unit"/>
+    </ItemGroup>
+
+</Project>
