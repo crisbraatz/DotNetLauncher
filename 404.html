@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>.NET Launcher</title>
+    <base href="/DotNetLauncher/"/>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,800&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css"/>
+    <link rel="stylesheet" href="css/app.css"/>
+    <link href="DotNetLauncher.styles.css" rel="stylesheet"/>
+
+    <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
+    <link rel="manifest" href="img/site.webmanifest">
+    <link rel="mask-icon" href="img/safari-pinned-tab.svg" color="#533dd4">
+    <meta name="msapplication-TileColor" content="#533dd4">
+    <meta name="theme-color" content="#533dd4">
+
+    <meta name="title" property="og:title" content=".NET Launcher">
+    <meta name="image" property="og:image" content="https://raw.githubusercontent.com/crisbraatz/DotNetLauncher/main/DotNetLauncher/wwwroot/img/dotnetlauncher.png">
+    <meta name="description" property="og:description" content=".NET Launcher delivers a fully functional application so you can focus on the business code rather than architecture.">
+    <meta name="author" content="Cristopher Braatz Cardoso">
+
+    <script type="text/javascript">
+        let segmentCount = 0;
+        let l = window.location;
+        l.replace(l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') + l.pathname.split('/').slice(0, 1 + segmentCount).join('/') + '/?p=/' + l.pathname.slice(1).split('/').slice(segmentCount).join('/').replace(/&/g, '~and~') + (l.search ? '&q=' + l.search.slice(1).replace(/&/g, '~and~') : '') + l.hash);
+    </script>
+</head>
+
+<body style="background-color: #533dd4;">
+</body>
+
+</html>

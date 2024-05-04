@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>.NET Launcher</title>
+    <base href="/DotNetLauncher/"/>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,800&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css"/>
+    <link rel="stylesheet" href="css/app.css"/>
+    <link href="DotNetLauncher.styles.css" rel="stylesheet"/>
+
+    <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
+    <link rel="manifest" href="img/site.webmanifest">
+    <link rel="mask-icon" href="img/safari-pinned-tab.svg" color="#533dd4">
+    <meta name="msapplication-TileColor" content="#533dd4">
+    <meta name="theme-color" content="#533dd4">
+
+    <meta name="title" property="og:title" content=".NET Launcher">
+    <meta name="image" property="og:image" content="https://raw.githubusercontent.com/crisbraatz/DotNetLauncher/main/DotNetLauncher/wwwroot/img/dotnetlauncher.png">
+    <meta name="description" property="og:description" content=".NET Launcher delivers a fully functional application so you can focus on the business code rather than architecture.">
+    <meta name="author" content="Cristopher Braatz Cardoso">
+</head>
+
+<body style="background-color: #533dd4;">
+    <div id="app">
+        <svg class="loading-progress">
+            <circle r="40%" cx="50%" cy="50%"/>
+            <circle r="40%" cx="50%" cy="50%"/>
+        </svg>
+        <div class="loading-progress-text"></div>
+    </div>
+
+    <div id="blazor-error-ui">
+        An unhandled error has occurred.
+        <a href="" class="reload">Reload</a>
+        <a class="dismiss">🗙</a>
+    </div>
+
+    <script type="text/javascript">
+        (function (l) {
+            if (l.search) {
+                let q = {};
+                l.search.slice(1).split('&').forEach(function (v) {
+                    let a = v.split('=');
+                    q[a[0]] = a.slice(1).join('=').replace(/~and~/g, '&');
+                });
+                if (q.p !== undefined) {
+                    window.history.replaceState(null, null, l.pathname.slice(0, -1) + (q.p || '') + (q.q ? ('?' + q.q) : '') + l.hash);
+                }
+            }
+        }(window.location))
+    </script>
+
+    <script src="js/bootstrap/bootstrap.min.js"></script>
+    <script src="_framework/blazor.webassembly.js"></script>
+</body>
+
+</html>

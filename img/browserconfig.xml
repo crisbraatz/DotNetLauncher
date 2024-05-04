@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<browserconfig>
+    <msapplication>
+        <tile>
+            <square150x150logo src="https://raw.githubusercontent.com/crisbraatz/DotNetLauncher/main/DotNetLauncher/wwwroot/img/mstile-150x150.png"/>
+            <TileColor>#533dd4</TileColor>
+        </tile>
+    </msapplication>
+</browserconfig>
